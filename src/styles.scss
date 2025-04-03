@@ -3,7 +3,17 @@
 @tailwind utilities;
 
 // !! Fonts
-
+.courier {
+  font-family: "Courier", "Courier New", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  &.md {
+    font-size: 14px;
+  }
+  &.sm {
+    font-size: 12px;
+  }
+}
 @font-face {
   font-family: "Helvetica Neue";
   src: url("fonts/HelveticaNeue-Medium.woff2") format("woff2");
@@ -53,12 +63,16 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #000;
+  margin: 1rem 0;
+}
+
 h1 {
   font-size: 48px;
   font-weight: 400;
-  &.med {
-    font-weight: 500;
-  }
 }
 
 h2 {
@@ -84,11 +98,17 @@ h5 {
 p {
   font-size: 1rem;
   margin-bottom: 1rem;
+  &.md {
+    font-size: 14px;
+  }
+  &.sm {
+    font-size: 12px;
+  }
 }
 
 .container {
   max-width: 1200px;
-  padding: 2rem;
+  padding: 1rem 4rem;
   margin: auto;
 }
 
@@ -101,4 +121,18 @@ p {
 .display-xl {
   font-size: 60px;
   font-weight: 500;
+}
+
+.display-lg {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.md-weight,
+.medium-weight {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 600;
 }

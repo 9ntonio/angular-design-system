@@ -7,10 +7,10 @@
   font-family: "Courier", "Courier New", monospace;
   font-size: 1rem;
   font-weight: 400;
-  &.md {
+  &.medium {
     font-size: 14px;
   }
-  &.sm {
+  &.small {
     font-size: 12px;
   }
 }
@@ -68,6 +68,7 @@ hr {
   height: 1px;
   background-color: #000;
   margin: 1rem 0;
+  width: 66%;
 }
 
 h1 {
@@ -98,10 +99,10 @@ h5 {
 p {
   font-size: 1rem;
   margin-bottom: 1rem;
-  &.md {
+  &.medium {
     font-size: 14px;
   }
-  &.sm {
+  &.small {
     font-size: 12px;
   }
 }
@@ -128,11 +129,12 @@ p {
   font-weight: 500;
 }
 
-.md-weight,
+.med,
 .medium-weight {
   font-weight: 500;
 }
 
-.bold {
+.bold,
+.bold-weight {
   font-weight: 600;
 }

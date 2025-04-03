@@ -66,9 +66,9 @@ body {
 hr {
   border: 0;
   height: 1px;
-  background-color: #000;
   margin: 1rem 0;
   width: 66%;
+  @apply bg-primary;
 }
 
 h1 {
@@ -126,7 +126,7 @@ p {
 
 .display-lg {
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .med,

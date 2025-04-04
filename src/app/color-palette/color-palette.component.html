@@ -1,0 +1,19 @@
+<main>
+  <div class="container">
+    <div *ngFor="let group of colorGroups" class="color-group">
+      <h2 class="color-group-name">{{ group.name }}</h2>
+      <div class="color-variants">
+        <div *ngFor="let variant of group.variants" class="color-variant">
+          <div
+            class="color-swatch"
+            [style.background-color]="variant.value"
+            [style.color]="getContrastColor(variant.value)"
+          >
+            <span class="variant-value">{{ variant.value }}</span>
+          </div>
+          <div class="variant-name">{{ variant.name }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

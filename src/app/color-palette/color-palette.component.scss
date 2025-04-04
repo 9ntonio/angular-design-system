@@ -1,0 +1,57 @@
+.color-palette {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.color-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.color-group-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.color-variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.color-variant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color-swatch {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 0.5rem;
+  
+  .variant-value {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+.variant-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}

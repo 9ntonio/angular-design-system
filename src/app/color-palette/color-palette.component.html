@@ -1,7 +1,12 @@
 <main>
   <div class="container">
-    <div *ngFor="let group of colorGroups" class="color-group">
-      <h2 class="color-group-name">{{ group.name }}</h2>
+    <h1 class="medium-weight text-primary">Color Palette</h1>
+    <hr class="mb-9" />
+
+    <div *ngFor="let group of colorGroups" class="color-group mb-12">
+      <div class="bg-grey-200 p-2 rounded-md">
+        <h3 class="courier color-group-name bg-grey-200">{{ group.name }}</h3>
+      </div>
       <div class="color-variants">
         <div *ngFor="let variant of group.variants" class="color-variant">
           <div

@@ -16,12 +16,12 @@ interface ColorGroup {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './color-palette.component.html',
-  styleUrl: './color-palette.component.scss'
+  styleUrl: './color-palette.component.scss',
 })
 export class ColorPaletteComponent {
   colorGroups: ColorGroup[] = [
     {
-      name: 'primary',
+      name: 'flinks blue (primary)',
       variants: [
         { name: '100', value: '#EAFAFF' },
         { name: '200', value: '#DCF5FD' },
@@ -34,10 +34,10 @@ export class ColorPaletteComponent {
         { name: '900', value: '#005672' },
         { name: '1000', value: '#00394C' },
         { name: '1100', value: '#001D26' },
-      ]
+      ],
     },
     {
-      name: 'secondary',
+      name: 'flinks night blue (secondary)',
       variants: [
         { name: '100', value: '#d9d9de' },
         { name: '200', value: '#b3b3be' },
@@ -50,7 +50,7 @@ export class ColorPaletteComponent {
         { name: '900', value: '#0E0E1E' },
         { name: '1000', value: '#090914' },
         { name: '1100', value: '#05050a' },
-      ]
+      ],
     },
     {
       name: 'grey',
@@ -66,7 +66,7 @@ export class ColorPaletteComponent {
         { name: '900', value: '#3F3F3F' },
         { name: '1000', value: '#2F2F2F' },
         { name: '1100', value: '#1F1F1F' },
-      ]
+      ],
     },
     {
       name: 'blue',
@@ -82,7 +82,7 @@ export class ColorPaletteComponent {
         { name: '900', value: '#003a72' },
         { name: '1000', value: '#00264c' },
         { name: '1100', value: '#001326' },
-      ]
+      ],
     },
     {
       name: 'mint',
@@ -98,7 +98,7 @@ export class ColorPaletteComponent {
         { name: '900', value: '#277472' },
         { name: '1000', value: '#1a4d4c' },
         { name: '1100', value: '#0d2726' },
-      ]
+      ],
     },
     {
       name: 'green',
@@ -114,7 +114,7 @@ export class ColorPaletteComponent {
         { name: '900', value: '#033d2b' },
         { name: '1000', value: '#02291c' },
         { name: '1100', value: '#01140e' },
-      ]
+      ],
     },
     {
       name: 'indigo',
@@ -130,7 +130,7 @@ export class ColorPaletteComponent {
         { name: '900', value: '#34337a' },
         { name: '1000', value: '#222251' },
         { name: '1100', value: '#111129' },
-      ]
+      ],
     },
     {
       name: 'purple',
@@ -146,7 +146,7 @@ export class ColorPaletteComponent {
         { name: '900', value: '#623678' },
         { name: '1000', value: '#412450' },
         { name: '1100', value: '#211228' },
-      ]
+      ],
     },
     {
       name: 'pink',
@@ -162,7 +162,7 @@ export class ColorPaletteComponent {
         { name: '900', value: '#731b2d' },
         { name: '1000', value: '#4d121e' },
         { name: '1100', value: '#26090f' },
-      ]
+      ],
     },
     {
       name: 'yellow',
@@ -178,7 +178,7 @@ export class ColorPaletteComponent {
         { name: '900', value: '#7b6613' },
         { name: '1000', value: '#52440c' },
         { name: '1100', value: '#292206' },
-      ]
+      ],
     },
     {
       name: 'orange',
@@ -194,7 +194,7 @@ export class ColorPaletteComponent {
         { name: '900', value: '#6e3402' },
         { name: '1000', value: '#492301' },
         { name: '1100', value: '#251101' },
-      ]
+      ],
     },
     {
       name: 'red',
@@ -210,22 +210,22 @@ export class ColorPaletteComponent {
         { name: '900', value: '#701212' },
         { name: '1000', value: '#4B0C0C' },
         { name: '1100', value: '#250606' },
-      ]
-    }
+      ],
+    },
   ];
 
   getContrastColor(hexColor: string): string {
     // Remove the hash character if present
     hexColor = hexColor.replace('#', '');
-    
+
     // Convert hex to RGB
     const r = parseInt(hexColor.substr(0, 2), 16);
     const g = parseInt(hexColor.substr(2, 2), 16);
     const b = parseInt(hexColor.substr(4, 2), 16);
-    
+
     // Calculate luminance
     const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-    
+
     // Return black for bright colors, white for dark colors
     return luminance > 0.5 ? '#000000' : '#FFFFFF';
   }

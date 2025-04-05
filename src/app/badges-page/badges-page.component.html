@@ -1,0 +1,35 @@
+<main>
+  <div class="container">
+    <h1 class="medium-weight text-primary">Badges</h1>
+    <hr class="mb-8" />
+    <h5 class="courier text-primary mb-1">HTTP</h5>
+    <div class="flex gap-4 mb-4">
+      <app-badges type="http" color="red" copy="GET" />
+      <app-badges type="http" color="orange" copy="GET" />
+      <app-badges type="http" color="green" copy="PUT" />
+      <app-badges type="http" color="blue" copy="DELETE" />
+    </div>
+
+    <h5 class="courier text-primary mb-1">Response</h5>
+    <div class="flex gap-4 mb-4">
+      <app-badges type="response" color="red" copy="200" />
+      <app-badges type="response" color="orange" copy="200" />
+      <app-badges type="response" color="green" copy="200" />
+      <app-badges type="response" color="blue" copy="200" />
+    </div>
+
+    <h5 class="courier text-primary mb-1">General</h5>
+    <div class="flex gap-4 mb-4">
+      <app-badges type="general" size="sm" copy="DOCS" />
+      <app-badges type="general" size="md" copy="API" />
+      <app-badges type="general" size="lg" copy="API" />
+    </div>
+
+    <h5 class="courier text-primary mb-1">General Outline</h5>
+    <div class="flex gap-4">
+      <app-badges type="general" size="sm" copy="DOCS" [outline]="true" />
+      <app-badges type="general" size="md" copy="API" [outline]="true" />
+      <app-badges type="general" size="lg" copy="API" [outline]="true" />
+    </div>
+  </div>
+</main>

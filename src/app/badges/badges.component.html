@@ -1,0 +1,32 @@
+<!-- !! HTTP Badges need BOTH type='http' & color value -->
+<!-- !! Response Badges need BOTH type='response' & color value -->
+<!-- !! General Badges need BOTH type='general' & size value & outline value -->
+@if(type === "http" && color === 'red') {
+<div class="api-badge http bg-red-500">{{ copy }}</div>
+} @if(type === "http" && color === 'orange') {
+<div class="api-badge http bg-orange-400">{{ copy }}</div>
+} @if(type === "http" && color === 'green') {
+<div class="api-badge http bg-green-400">{{ copy }}</div>
+} @if(type === "http" && color === 'blue') {
+<div class="api-badge http bg-blue-500">{{ copy }}</div>
+} @if(type === "response" && color === 'red'){
+<div class="api-badge resp bg-red-500">{{ copy }}</div>
+} @if(type === "response" && color === 'orange'){
+<div class="api-badge resp bg-orange-400">{{ copy }}</div>
+} @if(type === "response" && color === 'green'){
+<div class="api-badge resp bg-green-400">{{ copy }}</div>
+} @if(type === "response" && color === 'blue'){
+<div class="api-badge resp bg-blue-500">{{ copy }}</div>
+} @if(type === "general" && size === 'sm'){
+<div class="{{ outline ? 'general-badge-outline' : 'general-badge' }} sm">
+  {{ copy }}
+</div>
+} @if(type === "general" && size === 'md'){
+<div class="{{ outline ? 'general-badge-outline' : 'general-badge' }} md">
+  {{ copy }}
+</div>
+} @if(type === "general" && size === 'lg'){
+<div class="{{ outline ? 'general-badge-outline' : 'general-badge' }} lg">
+  {{ copy }}
+</div>
+}

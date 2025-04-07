@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IconsComponent } from '../icons/icons.component';
+import { IconsComponent } from 'public-library';
 
 @Component({
   selector: 'app-icons-page',

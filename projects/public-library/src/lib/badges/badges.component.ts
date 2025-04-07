@@ -8,8 +8,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './badges.component.scss',
 })
 export class BadgesComponent {
-  @Input() type!: string; // !! http, response, general
   @Input() copy!: string;
+  @Input() type!: string; // !! http, response, general
   @Input() color: string = 'blue'; // !! red, orange, green, blue
   @Input() size?: string; // !! sm, md, lg
   @Input() outline: boolean = false; // !! used for general badge

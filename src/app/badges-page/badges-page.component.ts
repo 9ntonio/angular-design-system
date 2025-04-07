@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BadgesComponent } from '../badges/badges.component';
+import { BadgesComponent } from 'public-library';
 
 @Component({
   selector: 'app-badges-page',

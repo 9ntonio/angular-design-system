@@ -9,3 +9,4 @@ export const routes: Routes = [
   { path: 'icons', component: IconsPageComponent },
   { path: 'badges', component: BadgesPageComponent },
 ];
+

@@ -6,6 +6,7 @@
 .courier {
   font-family: "Courier", "Courier New", monospace;
   font-weight: 400;
+  font-size: 1rem;
   &.medium {
     font-size: 14px;
   }
@@ -13,6 +14,15 @@
     font-size: 12px;
   }
 }
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("fonts/HelveticaNeue-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "Helvetica Neue";
   src: url("fonts/HelveticaNeue-Medium.woff2") format("woff2");
@@ -41,14 +51,6 @@
   font-family: "Helvetica Neue";
   src: url("fonts/HelveticaNeue-Thin.woff2") format("woff2");
   font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Helvetica Neue";
-  src: url("fonts/HelveticaNeue-Regular.woff2") format("woff2");
-  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -136,7 +138,7 @@ p {
   font-weight: 600;
 }
 
-.med,
+.md,
 .medium-weight {
   font-weight: 500;
 }
@@ -172,18 +174,6 @@ p {
   font-weight: 600;
   border-radius: 16px;
   @apply bg-black text-white;
-  &.sm {
-    font-size: 12px;
-    @apply px-[6px] pt-[2px];
-  }
-  &.md {
-    font-size: 14px;
-    @apply px-[10px] pt-[3px];
-  }
-  &.lg {
-    font-size: 16px;
-    @apply px-[12px] pt-[4px];
-  }
 }
 
 .general-badge-outline {
@@ -191,16 +181,22 @@ p {
   border-radius: 16px;
   border: 1px solid #00ace4;
   @apply bg-white text-black;
-  &.sm {
-    font-size: 12px;
-    @apply px-[6px] pt-[2px];
-  }
-  &.md {
-    font-size: 14px;
-    @apply px-[10px] pt-[3px];
-  }
-  &.lg {
-    font-size: 16px;
-    @apply px-[12px] pt-[4px];
-  }
+}
+
+.general-badge.sm,
+.general-badge-outline.sm {
+  font-size: 12px;
+  @apply px-[6px] pt-[2px];
+}
+
+.general-badge.md,
+.general-badge-outline.md {
+  font-size: 14px;
+  @apply px-[10px] pt-[3px];
+}
+
+.general-badge.lg,
+.general-badge-outline.lg {
+  font-size: 16px;
+  @apply px-[12px] pt-[4px];
 }

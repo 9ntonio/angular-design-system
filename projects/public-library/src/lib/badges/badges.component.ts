@@ -9,8 +9,8 @@ import { Component, Input } from '@angular/core';
 })
 export class BadgesComponent {
   @Input() copy!: string;
-  @Input() type!: string; // !! http, response, general
-  @Input() color: string = 'blue'; // !! red, orange, green, blue
-  @Input() size?: string; // !! sm, md, lg
-  @Input() outline: boolean = false; // !! used for general badge
+  @Input() type!: 'http' | 'response' | 'general';
+  @Input() color: 'red' | 'orange' | 'green' | 'blue' = 'blue';
+  @Input() size?: 'sm' | 'md' | 'lg';
+  @Input() outline = false;
 }

@@ -163,9 +163,9 @@ button {
 		&:disabled {
 			@apply text-grey-600;
 		}
-		&:focus {
+		&:focus-visible {
 			@apply outline-primary-600;
-			box-shadow: 0 0 0 2px rgba(128, 185, 242, 0.5);
+			box-shadow: 0 0 0 2px rgba(128, 185, 242, 1);
 		}
 		&.sm {
 			font-size: 14px;
@@ -175,6 +175,22 @@ button {
 		}
 		&.lg {
 			font-size: 20px;
+		}
+	}
+	&.icon {
+		font-size: 14px;
+		font-weight: 400;
+		border-radius: 0;
+		@apply text-black;
+		&:hover {
+			@apply text-black;
+		}
+		&:focus-visible {
+			@apply outline-none;
+			& #copy-icon {
+				@apply outline-primary-600;
+				box-shadow: 0 0 0 2px rgba(128, 185, 242, 1);
+			}
 		}
 	}
 }
@@ -188,7 +204,7 @@ button.primary.lg {
 	&:disabled {
 		@apply bg-grey-300 text-grey-700;
 	}
-	&:focus {
+	&:focus-visible {
 		@apply bg-primary text-white;
 		outline: 1px solid #1b1b3c;
 		box-shadow: 0 0 0 2px rgb(141, 141, 158, 0.5);
@@ -204,7 +220,7 @@ button.secondary.lg {
 	&:disabled {
 		@apply bg-grey-300 text-grey-700;
 	}
-	&:focus {
+	&:focus-visible {
 		@apply bg-secondary-600 text-white;
 		outline: 2px solid #0073e4;
 		box-shadow: 0 0 0 4px rgba(128, 185, 242, 0.5);
@@ -220,7 +236,7 @@ button.tertiary.lg {
 	&:disabled {
 		@apply bg-grey-300 text-grey-700;
 	}
-	&:focus {
+	&:focus-visible {
 		@apply bg-white text-secondary-600;
 		outline: 1px solid #0073e4;
 		box-shadow: 0 0 0 2px rgba(0, 115, 228, 0.5);

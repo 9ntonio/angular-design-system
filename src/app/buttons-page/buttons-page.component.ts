@@ -9,7 +9,7 @@ import { ButtonsComponent } from 'public-library';
 	styleUrl: './buttons-page.component.scss',
 })
 export class ButtonsPageComponent {
-	myFunction(str: string) {
+	consoleTest(str: string) {
 		console.log(
 			`%c!!! Clicked ${str} !!!`,
 			'color: white; font-weight: bold; background-color: #ff0000; padding:2px; border-radius: 2px;'

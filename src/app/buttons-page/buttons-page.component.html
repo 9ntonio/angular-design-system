@@ -9,7 +9,7 @@
 				type="primary"
 				size="sm"
 				copy="Book a demo"
-				(click)="myFunction('Primary')"
+				(click)="consoleTest('Primary')"
 			/>
 			<lib-buttons type="primary" size="md" copy="Book a demo" />
 			<lib-buttons type="primary" size="lg" copy="Book a demo" />
@@ -227,5 +227,12 @@
 				[disabled]="true"
 			/>
 		</div>
+
+		<h5 class="medium-weight text-primary courier mb-3">Icon</h5>
+		<div class="w-[140px] flex justify-center">
+			<lib-buttons type="icon" />
+		</div>
+
+		<div class="mb-[100px]"></div>
 	</div>
 </main>

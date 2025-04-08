@@ -8,4 +8,11 @@ import { ButtonsComponent } from 'public-library';
 	templateUrl: './buttons-page.component.html',
 	styleUrl: './buttons-page.component.scss',
 })
-export class ButtonsPageComponent {}
+export class ButtonsPageComponent {
+	myFunction(str: string) {
+		console.log(
+			`%c!!! Clicked ${str} !!!`,
+			'color: white; font-weight: bold; background-color: #ff0000; padding:2px; border-radius: 2px;'
+		);
+	}
+}

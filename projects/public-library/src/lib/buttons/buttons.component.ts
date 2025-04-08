@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
-
+import { IconsComponent } from '../icons/icons.component';
+import { CommonModule } from '@angular/common';
 @Component({
 	selector: 'lib-buttons',
 	standalone: true,
-	imports: [],
+	imports: [IconsComponent, CommonModule],
 	templateUrl: './buttons.component.html',
-	styleUrl: './buttons.component.css',
+	styleUrls: ['./buttons.component.scss'],
 })
 export class ButtonsComponent {
 	@Input() copy!: string;
@@ -13,5 +14,5 @@ export class ButtonsComponent {
 		'primary';
 	@Input() size: 'sm' | 'md' | 'lg' = 'md';
 	@Input() _disabled: boolean = false;
-	@Input() iconPosition: 'left' | 'right' | null = null;
+	@Input() iconPosition: 'left' | 'right' | undefined = undefined;
 }

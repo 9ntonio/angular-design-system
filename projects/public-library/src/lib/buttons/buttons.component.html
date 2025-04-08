@@ -1,3 +1,7 @@
-@if(type === 'primary') {
-<button class="primary" [disabled]="_disabled">{{ copy }}</button>
-}
+<button class="{{ type }} {{ size }}" [disabled]="_disabled">
+	<div class="flex gap-2">
+		<app-icons *ngIf="iconPosition === 'left'" name="arrow-right" />
+		<span class="button-text">{{ copy }}</span>
+		<app-icons *ngIf="iconPosition === 'right'" name="arrow-right" />
+	</div>
+</button>

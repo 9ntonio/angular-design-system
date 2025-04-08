@@ -117,11 +117,10 @@ p {
 }
 
 button {
+	border-radius: 200px;
+	font-weight: 500;
 	&.primary {
-		border-radius: 200px;
-		font-weight: 500;
 		color: white;
-
 		&.sm {
 			@apply bg-primary text-white py-3 px-5;
 		}
@@ -130,6 +129,18 @@ button {
 		}
 		&.lg {
 			@apply bg-primary text-white py-4 px-6;
+		}
+	}
+	&.secondary {
+		color: white;
+		&.sm {
+			@apply bg-secondary-600 text-white py-3 px-5;
+		}
+		&.md {
+			@apply bg-secondary-600 text-white py-3 px-6;
+		}
+		&.lg {
+			@apply bg-secondary-600 text-white py-4 px-6;
 		}
 	}
 }
@@ -145,8 +156,24 @@ button.primary.lg {
 	}
 	&:focus {
 		@apply bg-primary text-white;
-		outline: 1px solid #1b1b3c;
-		box-shadow: 0 0 0 3px rgb(141, 141, 158, 0.5);
+		outline: 2px solid #1b1b3c;
+		box-shadow: 0 0 0 4px rgb(141, 141, 158, 0.5);
+	}
+}
+
+button.secondary.sm,
+button.secondary.md,
+button.secondary.lg {
+	&:hover {
+		@apply bg-secondary-300 text-white;
+	}
+	&:disabled {
+		@apply bg-grey-300 text-grey-700;
+	}
+	&:focus {
+		@apply bg-secondary-600 text-white;
+		outline: 2px solid #0073e4;
+		box-shadow: 0 0 0 4px rgba(128, 185, 242, 0.5);
 	}
 }
 

@@ -1,7 +1,11 @@
 <button class="{{ type }} {{ size }}" [disabled]="disabled">
-	<div class="flex gap-2">
+	<div class="relative flex group gap-2">
 		<app-icons *ngIf="iconPosition === 'left'" name="arrow-right" />
-		<span class="button-text">{{ copy }}</span>
+		<span class="button-text relative">{{ copy }}</span>
 		<app-icons *ngIf="iconPosition === 'right'" name="arrow-right" />
+		<span
+			*ngIf="type === 'text' && !disabled"
+			class="absolute left-0 bottom-0 w-0 h-[1px] bg-black group-hover:w-full transition-all duration-200 ease-out origin-left"
+		></span>
 	</div>
 </button>

@@ -13,6 +13,6 @@ export class ButtonsComponent {
 	@Input() type: 'primary' | 'secondary' | 'tertiary' | 'text' | 'icon' =
 		'primary';
 	@Input() size: 'sm' | 'md' | 'lg' = 'md';
-	@Input() _disabled: boolean = false;
+	@Input() disabled: boolean = false;
 	@Input() iconPosition: 'left' | 'right' | undefined = undefined;
 }

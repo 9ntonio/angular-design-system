@@ -1,4 +1,4 @@
-<button class="{{ type }} {{ size }}" [disabled]="disabled">
+<button class="{{ type }} {{ size }}" [disabled]="disabled" (click)="(onClick)">
 	<div class="flex gap-2">
 		<app-icons *ngIf="iconPosition === 'left'" name="arrow-right" />
 		<span class="button-text">{{ copy }}</span>

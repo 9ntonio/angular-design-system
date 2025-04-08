@@ -15,4 +15,5 @@ export class ButtonsComponent {
 	@Input() size: 'sm' | 'md' | 'lg' = 'md';
 	@Input() disabled: boolean = false;
 	@Input() iconPosition: 'left' | 'right' | undefined = undefined;
+	@Input() onClick: Function | undefined = undefined;
 }

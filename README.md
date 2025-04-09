@@ -1,6 +1,20 @@
-# AngularDesignSystem
+# Flinks Design System
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.17.
+
+## Notes on using `cf-content-types-generator`
+
+`npx cf-content-types-generator -s [Space-ID] -t [Contentful-Personal-Token] -o projects/public-library/src/lib/contentfulmodels/contentful-types.ts -X -r`
+
+The `-X` flag creates TypeScript types that are compatible with contentful.js v10. When you use this flag, the generator will produce types specifically formatted to work with version 10 of the Contentful JavaScript SDK.
+
+This is particularly useful because the v10 version of the Contentful SDK has a different typing system compared to earlier versions. The v10 types include features like:
+
+-   Support for chain modifiers
+-   Built-in localization support (making the --localized flag unnecessary when using v10 types)
+-   Different structure for defining content type skeletons
+
+This flag is usually used together with the `-r` flag when you want to generate response types as well, which is another feature specific to v10 compatibility.
 
 ## Development server
 
@@ -12,7 +26,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build public-library` to build the library when you've added or changed anything within it. If you `DO NOT` build from your changes, the application will `NOT` see the changes.
 
 ## Running unit tests
 

@@ -36,7 +36,15 @@ export class IconsComponent {
 		| 'arrow-right'
 		| 'close'
 		| 'chevron-up'
-		| 'chevron-down';
+		| 'chevron-down'
+		| 'api'
+		| 'loan'
+		| 'bank'
+		| 'doc'
+		| 'funding'
+		| 'insights'
+		| 'job'
+		| 'face-id';
 	@Input() height = '40px';
 	@Input() width = '40px';
 }

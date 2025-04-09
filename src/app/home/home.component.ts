@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ChainModifiers } from 'contentful';
 import {
 	ContentfulService,
 	TypeArticlePage,
 	StateService,
 } from 'public-library';
-import { CommonModule } from '@angular/common';
-import { ChainModifiers } from 'contentful';
 
 @Component({
 	selector: 'app-home',

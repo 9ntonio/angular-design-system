@@ -44,7 +44,13 @@ export class IconsComponent {
 		| 'funding'
 		| 'insights'
 		| 'job'
-		| 'face-id';
+		| 'face-id'
+		| 'logo-desktop-v1'
+		| 'logo-mobile-v1'
+		| 'logo-desktop-v2'
+		| 'logo-mobile-v2'
+		| 'logo-desktop-v3'
+		| 'logo-mobile-v3';
 	@Input() height = '40px';
 	@Input() width = '40px';
 }

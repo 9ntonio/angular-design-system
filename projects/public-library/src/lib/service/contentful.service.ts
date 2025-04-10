@@ -5,7 +5,7 @@ import {
 	TypeArticlePageSkeleton,
 	TypeArticlePageWithoutLinkResolutionResponse,
 } from '../contentfulmodels/contentful-types.ts';
-import { Observable, from, map } from 'rxjs';
+import { Observable, from, map, catchError, of, throwError } from 'rxjs';
 
 const CONFIG = {
 	space: environment.SPACE_ID ?? '',
@@ -39,13 +39,17 @@ export class ContentfulService {
 			this._contentfulClient.getEntries<TypeArticlePageSkeleton>({
 				content_type: 'articlePage',
 				'fields.slug': slug,
-				limit: 9,
+				limit: 2,
 			})
 		).pipe(
 			map(
 				(response) =>
 					response.items as TypeArticlePageWithoutLinkResolutionResponse[]
-			)
+			),
+			catchError((error) => {
+				console.error('Error fetching articles:', error);
+				return throwError(() =>  new Error(`Error: ${ error }`);
+			})
 		);
 	}
 }

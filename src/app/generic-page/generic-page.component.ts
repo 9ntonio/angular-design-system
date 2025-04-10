@@ -29,7 +29,9 @@ export class GenericPageComponent implements OnInit {
 	ngOnInit() {
 		this.subscriptions.add(
 			this.route.url.subscribe((segments) => {
-				const slug = segments.map((segment) => segment.path).join('/');
+				const slug = segments
+					.map((segment) => segment.path.replace(/\s+/g, '-'))
+					.join('/');
 				if (slug) {
 					this.initArticle(slug);
 				} else {
@@ -44,14 +46,10 @@ export class GenericPageComponent implements OnInit {
 	}
 
 	private initArticle(slug: string) {
-		console.log(
-			`%c Init Article ${slug}`,
-			'color: white; background-color: #ff0000; padding: 2px; border-radius: 4px;'
-		);
 		this.articleData$ = this.contentfulService.getArticleEntries(slug);
 		this.articleData$.subscribe((data) => {
 			console.log(
-				`%c data length: ${data.length} `,
+				`%c slug: ${slug} - length: ${data.length} `,
 				'color: white; background-color: #ff0000; padding: 2px; border-radius: 4px;'
 			);
 		});

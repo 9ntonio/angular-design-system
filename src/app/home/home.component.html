@@ -1,6 +1,9 @@
 <main>
 	<div class="container">
-		<h1 class="bold-weight text-primary">Typography</h1>
+		<ng-container *ngFor="let article of articleData$ | async">
+			<h1 class="bold-weight text-primary">{{ article.fields.title }}</h1>
+		</ng-container>
+
 		<hr />
 
 		<div class="flex">

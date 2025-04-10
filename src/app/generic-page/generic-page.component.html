@@ -1,7 +1,13 @@
 <main>
 	<div class="container">
-		<h1 class="bold-weight text-primary">Catch All Page 🤷</h1>
+		<h1 class="bold-weight text-primary">Catch All Page</h1>
 		<hr />
-		<pre class="text-primary-800 courier bold-weight">{{ articleData$ | async | json }}</pre>
+		@if(articleData$ | async; as articles) { @if(articles.length === 0) {
+		<h2 class="bold-weight text-red-600">⚠️ 🚧 NOPE 🚧 ⚠️</h2>
+		} @else {
+		<pre class="text-primary-800 courier bold-weight">{{
+			articles | json
+		}}</pre>
+		} }
 	</div>
 </main>

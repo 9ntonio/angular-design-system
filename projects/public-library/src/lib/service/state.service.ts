@@ -5,8 +5,8 @@ import { BehaviorSubject } from 'rxjs';
 	providedIn: 'root',
 })
 export class StateService {
-	private contentfulData = new BehaviorSubject<any>(null);
-	contentfulData$ = this.contentfulData.asObservable();
+	private readonly contentfulData = new BehaviorSubject<any>(null);
+	public readonly contentfulData$ = this.contentfulData.asObservable();
 
 	setContentfulData(data: any) {
 		this.contentfulData.next(data);

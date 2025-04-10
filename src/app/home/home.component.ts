@@ -1,10 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import {
 	ContentfulService,
 	StateService,
+	TypeArticlePageWithoutLinkResolutionResponse,
 } from 'public-library';
 
 @Component({
@@ -16,6 +17,9 @@ import {
 })
 export class HomeComponent implements OnInit, OnDestroy {
 	private readonly subscriptions = new Subscription();
+	public articleData$!: Observable<
+		TypeArticlePageWithoutLinkResolutionResponse[]
+	>;
 
 	constructor(
 		private readonly _contentfulService: ContentfulService,
@@ -36,7 +40,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 			})
 		);
 
-		this._contentfulService.getEntry();
+		this.articleData$ = this._contentfulService.getEntry();
 	}
 
 	ngOnDestroy() {

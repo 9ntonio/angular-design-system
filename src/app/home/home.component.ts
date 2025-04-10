@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChainModifiers } from 'contentful';
+import { Observable } from 'rxjs';
 import {
 	ContentfulService,
 	TypeArticlePage,
@@ -14,6 +15,7 @@ import {
 	templateUrl: './home.component.html',
 	styleUrl: './home.component.scss',
 })
+
 export class HomeComponent implements OnInit {
 	public _contentfulData: TypeArticlePage<ChainModifiers> | null = null;
 

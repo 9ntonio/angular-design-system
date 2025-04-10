@@ -11,4 +11,14 @@ export const routes: Routes = [
 	{ path: 'icons', component: IconsPageComponent },
 	{ path: 'badges', component: BadgesPageComponent },
 	{ path: 'buttons', component: ButtonsPageComponent },
+
+	// !! Catch-all route for generic pages
+	// !! This single route handles all dynamic generic pages from Contentful
+	{
+		path: '**',
+		loadComponent: () =>
+			import('./generic-page/generic-page.component').then(
+				(m) => m.GenericPageComponent
+			),
+	},
 ];

@@ -4,11 +4,57 @@
 		<hr class="mb-9" />
 
 		<div class="mb-8">
+			<h5 class="medium-weight text-primary courier mb-2">
+				Banner Light:
+			</h5>
+			<div class="flex flex-col gap-4">
+				<lib-banner
+					type="light"
+					title="Transaction history"
+					copy="Transaction history is available for chequing, savings, and credit card accounts."
+					[button]="true"
+					buttonCopy="Register Now"
+					(clicked)="registerNow()"
+				/>
+
+				<lib-banner
+					type="light"
+					title="Transaction history"
+					copy="Transaction history is available for chequing, savings, and credit card accounts."
+					[close]="true"
+				/>
+			</div>
+		</div>
+
+		<div class="mb-8">
+			<h5 class="medium-weight text-primary courier mb-2">
+				Banner Dark:
+			</h5>
+			<div class="flex flex-col gap-4">
+				<lib-banner
+					type="dark"
+					title="Transaction history"
+					copy="Transaction history is available for chequing, savings, and credit card accounts."
+					[button]="true"
+					buttonCopy="Register Now"
+					(clicked)="registerNow()"
+				/>
+
+				<lib-banner
+					type="dark"
+					title="Transaction history"
+					copy="Transaction history is available for chequing, savings, and credit card accounts."
+					[close]="true"
+				/>
+			</div>
+		</div>
+
+		<div class="mb-8">
 			<h5 class="medium-weight text-primary courier mb-2">Info:</h5>
 			<div class="flex flex-col gap-4">
 				<lib-callout
 					type="info"
-					header="Transaction history"
+					title="Transaction history"
 					copy="Transaction history is available for chequing, savings, and credit card accounts."
 				/>
 
@@ -24,7 +70,7 @@
 			<div class="flex flex-col gap-4">
 				<lib-callout
 					type="success"
-					header="Transaction history"
+					title="Transaction history"
 					copy="Transaction history is available for chequing, savings, and credit card accounts."
 				/>
 
@@ -40,7 +86,7 @@
 			<div class="flex flex-col gap-4">
 				<lib-callout
 					type="warning"
-					header="Transaction history"
+					title="Transaction history"
 					copy="Transaction history is available for chequing, savings, and credit card accounts."
 				/>
 

@@ -9,3 +9,4 @@ export * from './lib/contentfulmodels/contentful-types.ts';
 export * from './lib/service/contentful.service';
 export * from './lib/service/state.service';
 export * from './lib/callout/callout.component';
+export * from './lib/banner/banner.component';

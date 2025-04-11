@@ -351,3 +351,24 @@ button.tertiary.lg {
 		@apply bg-orange-100 text-orange-700 border-orange-700;
 	}
 }
+
+// !! Banner
+.banner {
+	padding: 12px 40px;
+	font-size: 1rem;
+	position: relative;
+	@apply flex gap-6 items-center justify-center;
+	&.light {
+		@apply bg-primary-200 text-secondary-600;
+	}
+	&.dark {
+		@apply bg-secondary-600 text-white;
+	}
+	#banner-close {
+		position: absolute;
+		right: 20px;
+		&:hover {
+			@apply cursor-pointer;
+		}
+	}
+}

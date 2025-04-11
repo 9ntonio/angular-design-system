@@ -1,14 +1,14 @@
 <div class="callout {{ type }}">
-	<ng-container *ngIf="header">
-		<app-icons [name]="type" height="32px" width="32px" />
+	<ng-container *ngIf="title">
+		<lib-icons [name]="type" height="32px" width="32px" />
 		<div class="flex flex-col">
-			<div class="font-semibold">{{ header }}</div>
+			<div class="font-medium">{{ title }}</div>
 			<div>{{ copy }}</div>
 		</div>
 	</ng-container>
-	<ng-container *ngIf="!header">
+	<ng-container *ngIf="!title">
 		<div class="flex items-center gap-3">
-			<app-icons [name]="type" height="32px" width="32px" />
+			<lib-icons [name]="type" height="32px" width="32px" />
 			<div>{{ copy }}</div>
 		</div>
 	</ng-container>

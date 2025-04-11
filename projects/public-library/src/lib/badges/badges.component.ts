@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-	selector: 'app-badges',
+	selector: 'lib-badges',
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: './badges.component.html',

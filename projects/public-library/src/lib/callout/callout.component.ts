@@ -11,6 +11,6 @@ import { IconsComponent } from '../icons/icons.component';
 })
 export class CalloutComponent {
 	@Input() type: 'info' | 'success' | 'warning' = 'info';
-	@Input() header: string | null = null;
 	@Input() copy!: string;
+	@Input() title?: string;
 }

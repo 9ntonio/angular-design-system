@@ -51,6 +51,6 @@ export class IconsComponent {
 		| 'logo-mobile-v2'
 		| 'logo-desktop-v3'
 		| 'logo-mobile-v3';
-	@Input() height = '40px';
-	@Input() width = '40px';
+	@Input() height = '24px';
+	@Input() width = '24px';
 }

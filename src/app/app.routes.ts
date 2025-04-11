@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { IconsPageComponent } from './icons-page/icons-page.component';
 import { BadgesPageComponent } from './badges-page/badges-page.component';
 import { ButtonsPageComponent } from './buttons-page/buttons-page.component';
+import { CalloutPageComponent } from './callout-page/callout-page.component';
 
 export const routes: Routes = [
 	{ path: '', component: HomeComponent },
@@ -11,6 +12,7 @@ export const routes: Routes = [
 	{ path: 'icons', component: IconsPageComponent },
 	{ path: 'badges', component: BadgesPageComponent },
 	{ path: 'buttons', component: ButtonsPageComponent },
+	{ path: 'callout', component: CalloutPageComponent },
 
 	// !! Catch-all route for generic pages
 	// !! This single route handles all dynamic generic pages from Contentful

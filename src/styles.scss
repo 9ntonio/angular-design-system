@@ -291,6 +291,7 @@ button.tertiary.lg {
 	font-size: 12px;
 }
 
+// !! Badges
 .api-badge {
 	font-weight: 600;
 	border-radius: 4px;
@@ -332,4 +333,21 @@ button.tertiary.lg {
 .general-badge-outline.lg {
 	font-size: 16px;
 	@apply px-[12px] pt-[4px];
+}
+
+// !! Callout
+.callout {
+	font-size: 14px;
+	border: 2px solid #000;
+	@apply flex gap-3 p-4 rounded-lg w-[680px];
+
+	&.info {
+		@apply bg-blue-100 text-blue-500 border-primary-500;
+	}
+	&.success {
+		@apply bg-green-100 text-green-600 border-green-600;
+	}
+	&.warning {
+		@apply bg-orange-100 text-orange-700 border-orange-700;
+	}
 }

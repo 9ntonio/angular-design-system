@@ -14,8 +14,7 @@ export const routes: Routes = [
 	{ path: 'buttons', component: ButtonsPageComponent },
 	{ path: 'callout', component: CalloutPageComponent },
 
-	// !! Catch-all route for generic pages
-	// !! This single route handles all dynamic generic pages from Contentful
+	// *Catch-all route for generic pages - This single route handles all dynamic routes
 	{
 		path: '**',
 		loadComponent: () =>

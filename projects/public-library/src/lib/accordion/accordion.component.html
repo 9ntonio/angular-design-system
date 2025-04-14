@@ -1,0 +1,25 @@
+<details #detailsElement
+		class="border rounded-lg overflow-hidden open:bg-purple-50 open:shadow-md transition-all duration-200">
+
+	<summary (click)="toggleDetails($event, detailsElement)"
+			class="flex items-center justify-between px-4 py-3 cursor-pointer bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 list-none">
+		<span class="font-medium">{{title}}</span>
+
+		<!--!! SVG icon that rotates -->
+		<svg class="w-5 h-5 transition-transform duration-200"
+			[class.rotate-180]="detailsElement.open"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2">
+		<polyline points="6 9 12 15 18 9"></polyline>
+		</svg>
+	</summary>
+
+	<div class="p-4 border-t">
+		<p>This example uses JavaScript to control the animation when toggling the details.</p>
+	</div>
+</details>
+
+

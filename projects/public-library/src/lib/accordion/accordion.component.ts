@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from "@angular/common"
+import { BadgesComponent } from '../badges/badges.component';
 
 @Component({
   selector: 'lib-accordion',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,BadgesComponent],
   templateUrl: './accordion.component.html',
   styleUrl: './accordion.component.css'
 })

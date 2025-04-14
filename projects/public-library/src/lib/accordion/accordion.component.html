@@ -1,9 +1,11 @@
 <details #detailsElement
-		class="border rounded-lg overflow-hidden open:bg-purple-50 open:shadow-md transition-all duration-200">
+		class="border-[1px] border-gray-300 rounded-t-xl rounded-b-none bg-white overflow-hidden open:bg-white transition-all duration-200">
 
-	<summary (click)="toggleDetails($event, detailsElement)"
-			class="flex items-center justify-between px-4 py-3 cursor-pointer bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 list-none">
-		<span class="font-medium">{{title}}</span>
+	<summary (click)="toggleDetails($event, detailsElement)" class="flex items-center justify-between px-5 py-4 cursor-pointer hover:bg-[#F7F8F9] list-none focus:outline-blue-600">
+		<div class="flex items-center gap-2">
+			<lib-badges copy="202" type="response" color="red" size="sm" />
+			<span class="courier text-[#3F3F3F]">{{title}}</span>
+		</div>
 
 		<!--!! SVG icon that rotates -->
 		<svg class="w-5 h-5 transition-transform duration-200"
@@ -17,8 +19,46 @@
 		</svg>
 	</summary>
 
-	<div class="p-4 border-t">
-		<p>This example uses JavaScript to control the animation when toggling the details.</p>
+	<!--!! Accordion content -->
+	<div class="px-4 pb-4">
+		<p class="md-font text-grey-800">
+			This is a short description about this response
+		</p>
+
+		<div class="text-secondary-600 medium-weight mb-2">
+			RESPONSE BODY
+		</div>
+
+		<div class="border-[1px] text-grey-800 medium-weight border-gray-300 bg-grey-300 rounded-t-xl py-3 px-4">
+			Objects
+		</div>
+
+		<div class="border-[1px] text-secondary border-gray-300 py-3 px-4 courier">
+			FlinksCode
+			<span class="ml-2 text-grey-700 small-font">string</span>
+		</div>
+
+		<div class="border-[1px] border-t-0 text-secondary border-gray-300 py-3 px-4 courier">
+			Links
+			<span class="ml-2 text-grey-700 small-font">array of objects</span>
+		</div>
+
+		<div class="border-[1px] border-t-0 text-secondary border-gray-300 py-3 px-4 courier">
+			HttpStatusCode
+			<span class="ml-2 text-grey-700 small-font">integer</span>
+			<span class="ml-2 text-grey-700 small-font">Defaults to 0</span>
+		</div>
+
+		<div class="border-[1px] border-t-0 text-secondary border-gray-300 py-3 px-4 courier">
+			Message
+			<span class="ml-2 text-grey-700 small-font">string</span>
+		</div>
+
+		<div class="border-[1px] border-t-0 rounded-b-xl text-secondary border-gray-300 py-3 px-4 courier">
+			RequestId
+			<span class="ml-2 text-grey-700 small-font">string</span>
+		</div>
+
 	</div>
 </details>
 

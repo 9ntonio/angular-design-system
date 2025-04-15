@@ -9,8 +9,10 @@ import { TablesComponent } from 'public-library';
   styleUrl: './table-page.component.scss'
 })
 export class TablePageComponent {
-	public _tableHeaders = ['parameter', 'default value', 'valid values'];
+	public _headerColumns = ['parameter', 'default value', 'valid values'];
 	public _tableRows = [
+		['closeEnable', 'false', 'true, false'],
+		['closeEnable', 'true', 'true, false'],
 		['closeEnable', 'false', 'true, false'],
 		['closeEnable', 'true', 'true, false'],
 		['closeEnable', 'false', 'true, false'],
@@ -27,6 +29,7 @@ export class TablePageComponent {
 		['closeEnable','false', 'true, false'],
 		['closeEnable','true', 'true, false'],
 		['closeEnable','true', 'true, false'],
-		['closeEnable','true', 'true, false']
+		['closeEnable', 'true', 'true, false'],
+		['closeEnable', 'false', 'true, false'],
 	];
 }

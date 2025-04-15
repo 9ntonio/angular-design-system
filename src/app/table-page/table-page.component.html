@@ -3,16 +3,26 @@
 		<h1 class="medium-weight text-primary">Tables</h1>
 		<hr class="mb-8" />
 
+		<h5 class="courier text-primary mb-1">Column Header</h5>
 		<lib-tables
-			[tableHeaders]="_tableHeaders"
+			[tableHeaders]="_headerColumns"
 			[tableRows]="_tableRows"
 			[type]="'column'"
 		/>
 
+		<h5 class="courier text-primary mb-1">Row Header</h5>
 		<lib-tables
 			[tableRows]="_headerRows"
 			[type]="'row'"
 		/>
 
+		<h5 class="courier text-primary mb-1">Column & Row Headers</h5>
+		<lib-tables
+			[tableHeaders]="_headerColumns"
+			[tableRows]="_tableRows"
+			[type]="'both'"
+		/>
 	</div>
+
+	<div class="mb-72"></div>
 </main>

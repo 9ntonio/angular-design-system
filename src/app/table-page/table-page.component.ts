@@ -16,5 +16,17 @@ export class TablePageComponent {
 		['closeEnable', 'false', 'true, false'],
 		['closeEnable', 'true', 'true, false'],
 		['closeEnable', 'false', 'true, false'],
+		['closeEnable', 'true', 'true, false'],
+		['closeEnable', 'false', 'true, false'],
+	];
+	public _headerRows = [
+		['closeEnable','false', 'true, false'],
+		['closeEnable','true', 'true, false'],
+		['closeEnable','false', 'true, false'],
+		['closeEnable','true', 'true, false'],
+		['closeEnable','false', 'true, false'],
+		['closeEnable','true', 'true, false'],
+		['closeEnable','true', 'true, false'],
+		['closeEnable','true', 'true, false']
 	];
 }

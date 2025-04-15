@@ -11,6 +11,6 @@ import { CommonModule } from "@angular/common"
 export class TablesComponent {
 	//* tableRows: each inner array contains the values for a row
 	@Input() tableRows!: any[][];
-	@Input() tableHeaders!: any[];
+	@Input() tableHeaders?: any[];
 	@Input() type: 'column' | 'row' | 'both' = 'column';
 }

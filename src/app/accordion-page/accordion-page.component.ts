@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AccordionComponent } from 'public-library';
 import { CommonModule } from '@angular/common';
+import { AccordionComponent } from 'public-library';
 
 @Component({
 	selector: 'app-accordion-page',

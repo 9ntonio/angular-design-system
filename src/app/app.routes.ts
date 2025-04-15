@@ -6,7 +6,7 @@ import { BadgesPageComponent } from './badges-page/badges-page.component';
 import { ButtonsPageComponent } from './buttons-page/buttons-page.component';
 import { CalloutPageComponent } from './callout-page/callout-page.component';
 import { AccordionPageComponent } from './accordion-page/accordion-page.component';
-
+import { TablePageComponent } from './table-page/table-page.component';
 export const routes: Routes = [
 	{ path: '', component: HomeComponent },
 	{ path: 'colors', component: ColorPaletteComponent },
@@ -15,6 +15,7 @@ export const routes: Routes = [
 	{ path: 'buttons', component: ButtonsPageComponent },
 	{ path: 'callout', component: CalloutPageComponent },
 	{ path: 'accordion', component: AccordionPageComponent },
+	{ path: 'table', component: TablePageComponent },
 
 	//* Catch-all route for generic pages - This single route handles all dynamic routes
 	{

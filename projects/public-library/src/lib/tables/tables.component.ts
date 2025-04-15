@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from "@angular/common"
 
 @Component({
@@ -9,5 +9,8 @@ import { CommonModule } from "@angular/common"
   styleUrl: './tables.component.css'
 })
 export class TablesComponent {
-
+	//* tableRows: each inner array contains the values for a row
+	@Input() tableRows!: any[][];
+	@Input() tableHeaders!: any[];
+	@Input() type: 'column' | 'row' | 'both' = 'column';
 }

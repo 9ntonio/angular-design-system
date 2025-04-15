@@ -3,7 +3,11 @@
 		<h1 class="medium-weight text-primary">Tables</h1>
 		<hr class="mb-8" />
 
-		<lib-tables />
+		<lib-tables
+			[tableHeaders]="_tableHeaders"
+			[tableRows]="_tableRows"
+			[type]="'column'"
+		/>
 
 	</div>
 </main>

@@ -1,29 +1,23 @@
 <div class="overflow-hidden rounded-xl border border-grey-300">
-	<table>
-		<thead>
-			<tr>
-				<th>parameter</th>
-				<th>default value</th>
-				<th>valid values</th>
-			</tr>
-		</thead>
+	@if (type === "column") {
+		<table>
+			<thead>
+				<tr>
+					<ng-container *ngFor="let header of tableHeaders">
+						<th>{{ header }}</th>
+					</ng-container>
+				</tr>
+			</thead>
 
-		<tbody>
-			<tr>
-				<td>closeEnable</td>
-				<td>true</td>
-				<td>true, false</td>
-			</tr>
-			<tr>
-				<td>closeEnable</td>
-				<td>true</td>
-				<td>true, false</td>
-			</tr>
-			<tr>
-				<td>closeEnable</td>
-				<td>true</td>
-				<td>true, false</td>
-			</tr>
-		</tbody>
-	</table>
+			<tbody>
+				<ng-container *ngFor="let row of tableRows">
+					<tr>
+						<ng-container *ngFor="let data of row">
+							<td>{{ data }}</td>
+						</ng-container>
+					</tr>
+				</ng-container>
+			</tbody>
+		</table>
+	}
 </div>

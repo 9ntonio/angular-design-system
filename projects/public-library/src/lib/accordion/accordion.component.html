@@ -1,0 +1,104 @@
+<details #detailsElement
+		class="border-[1px] border-gray-300 {{ _borderCss }} bg-white overflow-hidden open:bg-white transition-all duration-200">
+
+	<summary (click)="toggleDetails($event, detailsElement)" class="flex items-center justify-between px-5 py-4 cursor-pointer hover:bg-[#F7F8F9] list-none focus:outline-blue-600">
+		<div class="flex items-center gap-2">
+			<lib-badges copy="202" type="response" color="red" size="sm" />
+			<span class="courier text-[#3F3F3F]">{{title}}</span>
+		</div>
+
+		<!--!! SVG icon that rotates -->
+		<svg class="w-5 h-5 transition-transform duration-200"
+			[class.rotate-180]="detailsElement.open"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2">
+		<polyline points="6 9 12 15 18 9"></polyline>
+		</svg>
+	</summary>
+
+	<!--!! Accordion content -->
+	<div class="px-4 pb-4">
+		<p class="md-font text-grey-800">
+			This is a short description about this response
+		</p>
+
+		<div class="text-secondary-600 medium-weight mb-2">
+			RESPONSE BODY
+		</div>
+
+		<div class="border-[1px] text-grey-800 medium-weight border-gray-300 bg-grey-300 rounded-t-xl py-3 px-4">
+			Objects
+		</div>
+
+		<!-- TODO: Refactor to make it Dynamicaly Fed -->
+
+		<div class="border-[1px] text-secondary border-gray-300 py-3 px-4 courier">
+			FlinksCode
+			<span class="ml-2 text-grey-700 small-font">string</span>
+		</div>
+
+		<div class="border-[1px] border-t-0 text-secondary border-gray-300 py-3 px-4">
+			<span class="courier">Links</span>
+			<span class="ml-2 text-grey-700 courier small-font">array of objects</span>
+
+			<!-- TODO: Make it Dynamic -->
+
+			<details #objDetailsElement class="mt-2 border-[1px] rounded-xl border-gray-300 bg-white overflow-hidden open:bg-grey-200 max-w-[140px] max-h-[40px] open:max-w-full open:max-h-full transition-all duration-300 ease-in-out">
+				<summary (click)="toggleObjDetails($event, detailsElement)" class="flex items-center gap-2 py-2 px-3 cursor-pointer hover:bg-grey-100 list-none focus:outline-blue-600">
+					<!--!! SVG icon that rotates -->
+					<svg class="w-5 h-5 transition-transform duration-200"
+						[class.rotate-180]="objDetailsElement.open"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2">
+						<polyline points="6 9 12 15 18 9"></polyline>
+					</svg>
+
+					<div class="md-font text-grey-800">
+						Show objects
+					</div>
+				</summary>
+
+				<!--!! Content -->
+				<div class="border-t-[1px] text-secondary bg-grey-100 border-gray-300 py-3 px-4 courier">
+					rel
+					<span class="ml-2 text-grey-700 small-font">string</span>
+				</div>
+
+				<div class="border-t-[1px] text-secondary bg-grey-100 border-gray-300 py-3 px-4 courier">
+					href
+					<span class="ml-2 text-grey-700 small-font">string</span>
+				</div>
+
+				<div class="border-t-[1px] rounded-b-xl text-secondary bg-grey-100 border-gray-300 py-3 px-4 courier">
+					example
+					<span class="ml-2 text-grey-700 small-font">string</span>
+				</div>
+			</details>
+		</div>
+
+		<div class="border-[1px] border-t-0 text-secondary border-gray-300 py-3 px-4 courier">
+			HttpStatusCode
+			<span class="ml-2 text-grey-700 small-font">integer</span>
+			<span class="ml-2 text-grey-700 small-font">Defaults to 0</span>
+		</div>
+
+		<div class="border-[1px] border-t-0 text-secondary border-gray-300 py-3 px-4 courier">
+			Message
+			<span class="ml-2 text-grey-700 small-font">string</span>
+		</div>
+
+		<div class="border-[1px] border-t-0 rounded-b-xl text-secondary border-gray-300 py-3 px-4 courier">
+			RequestId
+			<span class="ml-2 text-grey-700 small-font">string</span>
+		</div>
+
+	</div>
+</details>
+
+

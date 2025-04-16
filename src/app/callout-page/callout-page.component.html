@@ -1,0 +1,100 @@
+<main>
+	<div class="container">
+		<h1 class="medium-weight text-primary">Callouts</h1>
+		<hr class="mb-9" />
+
+		<div class="mb-8">
+			<h5 class="medium-weight text-primary courier mb-2">
+				Banner Light:
+			</h5>
+			<div class="flex flex-col gap-4">
+				<lib-banner
+					type="light"
+					title="Transaction history"
+					copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+					[button]="true"
+					buttonCopy="Register Now"
+					(clicked)="registerNow()"
+					[close]="true"
+				/>
+
+				<lib-banner
+					type="light"
+					title="Transaction history"
+					copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+				/>
+			</div>
+		</div>
+
+		<div class="mb-8">
+			<h5 class="medium-weight text-primary courier mb-2">
+				Banner Dark:
+			</h5>
+			<div class="flex flex-col gap-4">
+				<lib-banner
+					type="dark"
+					title="Transaction history"
+					copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+					[button]="true"
+					buttonCopy="Register Now"
+					(clicked)="registerNow()"
+				/>
+
+				<lib-banner
+					type="dark"
+					title="Transaction history"
+					copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+					[close]="true"
+				/>
+			</div>
+		</div>
+
+		<div class="mb-8">
+			<h5 class="medium-weight text-primary courier mb-2">Info:</h5>
+			<div class="flex flex-col gap-4">
+				<lib-callout
+					type="info"
+					title="Transaction history"
+					copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+				/>
+
+				<lib-callout
+					type="info"
+					copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+				/>
+			</div>
+		</div>
+
+		<div class="mb-8">
+			<h5 class="medium-weight text-primary courier mb-2">Success:</h5>
+			<div class="flex flex-col gap-4">
+				<lib-callout
+					type="success"
+					title="Transaction history"
+					copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+				/>
+
+				<lib-callout
+					type="success"
+					copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+				/>
+			</div>
+		</div>
+
+		<div class="mb-32">
+			<h5 class="medium-weight text-primary courier mb-2">Warning:</h5>
+			<div class="flex flex-col gap-4">
+				<lib-callout
+					type="warning"
+					title="Transaction history"
+					copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+				/>
+
+				<lib-callout
+					type="warning"
+					copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+				/>
+			</div>
+		</div>
+	</div>
+</main>

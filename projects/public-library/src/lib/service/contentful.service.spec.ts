@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PublicLibraryService } from './public-library.service';
+import { ContentfulService } from './contentful.service';
 
-describe('PublicLibraryService', () => {
-  let service: PublicLibraryService;
+describe('ContentfulService', () => {
+  let service: ContentfulService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PublicLibraryService);
+    service = TestBed.inject(ContentfulService);
   });
 
   it('should be created', () => {

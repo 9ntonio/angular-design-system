@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PublicLibraryComponent } from './public-library.component';
+import { AccordionPageComponent } from './accordion-page.component';
 
-describe('PublicLibraryComponent', () => {
-  let component: PublicLibraryComponent;
-  let fixture: ComponentFixture<PublicLibraryComponent>;
+describe('AccordionPageComponent', () => {
+  let component: AccordionPageComponent;
+  let fixture: ComponentFixture<AccordionPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PublicLibraryComponent]
+      imports: [AccordionPageComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PublicLibraryComponent);
+    fixture = TestBed.createComponent(AccordionPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

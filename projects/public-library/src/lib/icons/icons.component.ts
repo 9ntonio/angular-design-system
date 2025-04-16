@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-	selector: 'app-icons',
+	selector: 'lib-icons',
 	standalone: true,
 	imports: [],
 	templateUrl: './icons.component.html',
@@ -36,7 +36,21 @@ export class IconsComponent {
 		| 'arrow-right'
 		| 'close'
 		| 'chevron-up'
-		| 'chevron-down';
-	@Input() height = '40px';
-	@Input() width = '40px';
+		| 'chevron-down'
+		| 'api'
+		| 'loan'
+		| 'bank'
+		| 'doc'
+		| 'funding'
+		| 'insights'
+		| 'job'
+		| 'face-id'
+		| 'logo-desktop-v1'
+		| 'logo-mobile-v1'
+		| 'logo-desktop-v2'
+		| 'logo-mobile-v2'
+		| 'logo-desktop-v3'
+		| 'logo-mobile-v3';
+	@Input() height = '24px';
+	@Input() width = '24px';
 }

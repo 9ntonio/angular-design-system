@@ -1,89 +1,89 @@
 <main>
-  <div class="container">
-    <h1 class="medium-weight text-primary">
-      Helvetica Neue & <span class="courier display-lg">Courier Holmes</span>
-    </h1>
-    <hr />
-    <h1 class="display-xxl">Display XXL</h1>
-    <h1 class="display-xl">Display XL</h1>
+	<div class="container">
+		<ng-container *ngFor="let article of articleData$ | async">
+			<h1 class="bold-weight text-primary">{{ article.fields.title }}</h1>
+		</ng-container>
 
-    <div class="flex">
-      <h1 class="mr-6">H1-Reg</h1>
-      <h1 class="md">H1-Med</h1>
-    </div>
+		<hr />
+		<div class="flex">
+			<h1 class="mr-6">H1-Reg</h1>
+			<h1 class="md">H1-Med</h1>
+		</div>
 
-    <div class="flex">
-      <h2 class="mr-6">H2-Reg</h2>
-      <h2 class="md">H2-Med</h2>
-    </div>
+		<div class="flex">
+			<h2 class="mr-6">H2-Reg</h2>
+			<h2 class="md">H2-Med</h2>
+		</div>
 
-    <div class="flex">
-      <h3 class="mr-6">H3-Reg</h3>
-      <h3 class="md">H3-Med</h3>
-    </div>
+		<div class="flex">
+			<h3 class="mr-6">H3-Reg</h3>
+			<h3 class="md">H3-Med</h3>
+		</div>
 
-    <div class="flex">
-      <h4 class="mr-6">H4-Reg</h4>
-      <h4 class="md">H4-Med</h4>
-    </div>
+		<div class="flex">
+			<h4 class="mr-6">H4-Reg</h4>
+			<h4 class="md">H4-Med</h4>
+		</div>
 
-    <div class="flex">
-      <h5 class="mr-6">H5-Reg</h5>
-      <h5 class="md">H5-Med</h5>
-    </div>
+		<div class="flex">
+			<h5 class="mr-6">H5-Reg</h5>
+			<h5 class="md">H5-Med</h5>
+		</div>
 
-    <hr />
+		<hr />
 
-    <p>Body Lg - Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <p class="medium-weight">
-      Body Lg - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
+		<p>
+			Body Lg - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
+		<p class="medium-weight">
+			Body Lg - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
 
-    <hr />
+		<hr />
 
-    <p class="medium">
-      Body Med - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
-    <p class="medium medium-weight">
-      Body Med - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
+		<p class="medium">
+			Body Med - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
+		<p class="medium medium-weight">
+			Body Med - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
 
-    <hr />
+		<hr />
 
-    <p class="small">
-      Body Sm - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
-    <p class="small medium-weight">
-      Body Sm - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
+		<p class="small">
+			Body Sm - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
+		<p class="small medium-weight">
+			Body Sm - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
 
-    <hr />
+		<hr />
 
-    <p class="courier">
-      Code Lg - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
-    <p class="courier bold">
-      Code Lg - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
+		<p class="courier">
+			Code Lg - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
+		<p class="courier bold">
+			Code Lg - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
 
-    <hr />
+		<hr />
 
-    <p class="courier medium">
-      Code Md - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
-    <p class="courier medium bold">
-      Code Md - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
+		<p class="courier medium">
+			Code Md - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
+		<p class="courier medium bold">
+			Code Md - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
 
-    <hr />
+		<hr />
 
-    <p class="courier small">
-      Code Sm - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
-    <p class="courier small bold">
-      Code Sm - Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
+		<p class="courier small">
+			Code Sm - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
+		<p class="courier small bold">
+			Code Sm - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		</p>
 
-    <div class="h-[100px]"></div>
-  </div>
+		<div class="h-[100px]"></div>
+	</div>
 </main>

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-// !! Fonts
+//* ********** Fonts ********** */
 @font-face {
 	font-family: "Helvetica Neue";
 	src: url("fonts/HelveticaNeue-Regular.woff2") format("woff2");
@@ -26,7 +26,6 @@
 	font-style: normal;
 	font-display: swap;
 }
-
 @font-face {
 	font-family: "Helvetica Neue";
 	src: url("fonts/HelveticaNeue-Light.woff2") format("woff2");
@@ -42,19 +41,8 @@
 	font-style: normal;
 	font-display: swap;
 }
-.courier {
-	font-family: "Courier", "Courier New", monospace;
-	font-weight: 400;
-	font-size: 1rem;
-	&.medium {
-		font-size: 14px;
-	}
-	&.small {
-		font-size: 12px;
-	}
-}
 
-// !! HTML Element Classes
+//* ********** HTML Element Classes ********** */
 body {
 	font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
 		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
@@ -62,7 +50,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 }
-
 hr {
 	border: 0;
 	height: 1px;
@@ -115,6 +102,54 @@ p {
 	}
 }
 
+//* ********** Lists ********** */
+ol {
+	list-style-type: decimal;
+	line-height: 1.7;
+	@apply list-inside text-secondary-600;
+	& li {
+		@apply ml-4;
+	}
+}
+
+//* Second level - lowercase letters (a, b, c...) */
+ol ol {
+list-style-type: lower-alpha;
+}
+
+//* Third level - lowercase roman numerals (i, ii, iii...) */
+ol ol ol {
+list-style-type: lower-roman;
+}
+
+//* Fourth level - uppercase letters (A, B, C...) */
+ol ol ol ol {
+list-style-type: upper-alpha;
+}
+
+//* Fifth level - uppercase roman numerals (I, II, III...) */
+ol ol ol ol ol {
+list-style-type: upper-roman;
+}
+
+ul {
+	list-style-type: disc;
+	line-height: 1.7;
+	@apply list-inside text-secondary-600;
+	& li {
+		@apply ml-4;
+	}
+}
+
+ul ul {
+	list-style-type: "▸ ";
+}
+
+ul ul ul {
+	list-style-type: circle;
+}
+
+//* ********** Buttons ********** */
 button {
 	border-radius: 200px;
 	font-weight: 500;
@@ -243,7 +278,29 @@ button.tertiary.lg {
 	}
 }
 
-// !! Utility Classes
+//* ********** Tables ********** */
+#table-container {
+	// TODO: Remove max-h-[200px]
+	@apply overflow-hidden rounded-xl border border-grey-300 max-h-[200px];
+	display: block;
+	overflow: scroll;
+	margin-bottom: 1rem;
+
+	& table {
+		@apply min-w-full bg-white;
+	}
+}
+th {
+	@apply bg-grey-200 text-left text-secondary-600 border-b border-grey-300 md-font py-3 px-4 uppercase sticky top-0 left-0 z-10;
+}
+tr {
+	@apply odd:bg-white even:bg-grey-100;
+}
+td {
+	@apply border-b border-grey-300 md-font py-3 px-4;
+}
+
+//* ********** Utility Classes ********** */
 .container {
 	max-width: 1400px;
 	padding: 1rem 4rem;
@@ -254,6 +311,19 @@ button.tertiary.lg {
 	max-width: 1400px;
 	padding: 1rem 4rem 0;
 	margin: auto;
+}
+
+//* ********** Font Utilities ********** */
+.courier {
+	font-family: "Courier", "Courier New", monospace;
+	font-weight: 400;
+	font-size: 1rem;
+	&.medium {
+		font-size: 14px;
+	}
+	&.small {
+		font-size: 12px;
+	}
 }
 
 .display-xxl {
@@ -291,6 +361,7 @@ button.tertiary.lg {
 	font-size: 12px;
 }
 
+//* ********** Badges ********** */
 .api-badge {
 	font-weight: 600;
 	border-radius: 4px;
@@ -302,20 +373,17 @@ button.tertiary.lg {
 		font-size: 14px;
 	}
 }
-
 .general-badge {
 	font-weight: 600;
 	border-radius: 16px;
 	@apply bg-black text-white;
 }
-
 .general-badge-outline {
 	font-weight: 500;
 	border-radius: 16px;
 	border: 1px solid #00ace4;
 	@apply bg-white text-black;
 }
-
 .general-badge.sm,
 .general-badge-outline.sm {
 	font-size: 12px;
@@ -333,3 +401,43 @@ button.tertiary.lg {
 	font-size: 16px;
 	@apply px-[12px] pt-[4px];
 }
+
+//* ********** Callout ********** */
+.callout {
+	font-size: 14px;
+	border: 2px solid #000;
+	@apply flex gap-3 p-4 rounded-lg w-[680px];
+
+	&.info {
+		@apply bg-blue-100 text-blue-500 border-primary-500;
+	}
+	&.success {
+		@apply bg-green-100 text-green-600 border-green-600;
+	}
+	&.warning {
+		@apply bg-orange-100 text-orange-700 border-orange-700;
+	}
+}
+
+//* ********** Banner ********** */
+.banner {
+	padding: 12px 40px;
+	font-size: 1rem;
+	position: relative;
+	@apply flex gap-6 items-center justify-center;
+	&.light {
+		@apply bg-primary-200 text-secondary-600;
+	}
+	&.dark {
+		@apply bg-secondary-600 text-white;
+	}
+	#banner-close {
+		position: absolute;
+		right: 20px;
+		&:hover {
+			@apply cursor-pointer;
+		}
+	}
+}
+
+

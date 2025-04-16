@@ -1,0 +1,20 @@
+<div class="banner {{ type }}">
+	<div class="font-medium">{{ title }}</div>
+	<div>{{ copy }}</div>
+	<lib-buttons
+		*ngIf="button"
+		(click)="clicked.emit()"
+		copy="{{ buttonCopy }}"
+		type="primary"
+		size="sm"
+		class="mr-4"
+	/>
+	<lib-icons
+		*ngIf="close"
+		id="banner-close"
+		name="close"
+		height="32px"
+		width="32px"
+		(click)="closeBanner()"
+	/>
+</div>

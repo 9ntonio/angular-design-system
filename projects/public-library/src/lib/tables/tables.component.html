@@ -1,0 +1,61 @@
+<div id="table-container">
+	@if (type === "column") {
+		<table>
+			<thead>
+				<tr>
+					<ng-container *ngFor="let header of tableHeaders">
+						<th>{{ header }}</th>
+					</ng-container>
+				</tr>
+			</thead>
+
+			<tbody>
+				<ng-container *ngFor="let row of tableRows">
+					<tr>
+						<ng-container *ngFor="let data of row">
+							<td>{{ data }}</td>
+						</ng-container>
+					</tr>
+				</ng-container>
+			</tbody>
+		</table>
+	}
+	@if (type === "row") {
+		<table>
+			<tbody>
+				<ng-container *ngFor="let row of tableRows; let i = index">
+					<tr>
+						<th scope="row">{{ 'ROW ' + i }}</th>
+						<ng-container *ngFor="let data of row">
+							<td>{{ data }}</td>
+						</ng-container>
+					</tr>
+				</ng-container>
+			</tbody>
+		</table>
+	}
+	@if (type === "both") {
+		<table>
+			<thead>
+				<tr>
+					<!-- *Empty for layout due to the row headers below -->
+					<th></th>
+					<ng-container *ngFor="let header of tableHeaders">
+						<th>{{ header }}</th>
+					</ng-container>
+				</tr>
+			</thead>
+
+			<tbody>
+				<ng-container *ngFor="let row of tableRows; let i = index">
+					<tr>
+						<th scope="row">{{ 'ROW ' + i }}</th>
+						<ng-container *ngFor="let data of row">
+							<td>{{ data }}</td>
+						</ng-container>
+					</tr>
+				</ng-container>
+			</tbody>
+		</table>
+	}
+</div>

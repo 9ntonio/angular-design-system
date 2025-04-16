@@ -102,6 +102,53 @@ p {
 	}
 }
 
+//* ********** Lists ********** */
+ol {
+	list-style-type: decimal;
+	line-height: 1.7;
+	@apply list-inside text-secondary-600;
+	& li {
+		@apply ml-4;
+	}
+}
+
+//* Second level - lowercase letters (a, b, c...) */
+ol ol {
+list-style-type: lower-alpha;
+}
+
+//* Third level - lowercase roman numerals (i, ii, iii...) */
+ol ol ol {
+list-style-type: lower-roman;
+}
+
+//* Fourth level - uppercase letters (A, B, C...) */
+ol ol ol ol {
+list-style-type: upper-alpha;
+}
+
+//* Fifth level - uppercase roman numerals (I, II, III...) */
+ol ol ol ol ol {
+list-style-type: upper-roman;
+}
+
+ul {
+	list-style-type: disc;
+	line-height: 1.7;
+	@apply list-inside text-secondary-600;
+	& li {
+		@apply ml-4;
+	}
+}
+
+ul ul {
+	list-style-type: "▸ ";
+}
+
+ul ul ul {
+	list-style-type: circle;
+}
+
 //* ********** Buttons ********** */
 button {
 	border-radius: 200px;

@@ -8,6 +8,8 @@ import { CalloutPageComponent } from './callout-page/callout-page.component';
 import { AccordionPageComponent } from './accordion-page/accordion-page.component';
 import { TablePageComponent } from './table-page/table-page.component';
 import { ListPageComponent } from './list-page/list-page.component';
+import { StepsPageComponent } from './steps-page/steps-page.component';
+
 export const routes: Routes = [
 	{ path: '', component: HomeComponent },
 	{ path: 'colors', component: ColorPaletteComponent },
@@ -18,6 +20,7 @@ export const routes: Routes = [
 	{ path: 'accordion', component: AccordionPageComponent },
 	{ path: 'table', component: TablePageComponent },
 	{ path: 'list', component: ListPageComponent },
+	{ path: 'steps', component: StepsPageComponent },
 	//* Catch-all route for generic pages - This single route handles all dynamic routes
 	{
 		path: '**',
